@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULADORA</title>
+    <script src="./js/calculadora.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/calculadora.css">
+</head>
+<body>
+    <h1>Calculadora clásica</h1>
+    <!--División general de la calculadora-->
+    <div class="calculadora">
+        <!--Pantalla de la calculadora que al inicio muestra el número 0.-->
+        <p id="textoPantalla">0</p>
+        <!--
+            Se crean botones con el atributo onclick="nombreFuncion('valorRepresentado')",
+            de esta forma, cuando hagamos click en los botones actuarán según el Javascript enlazado.
+            En este caso, las filas de la calculadora estan ordenadas por párrafos, otras maneras son:
+            -Lista.
+            -Tabla.
+            -Utilizando float en el css.
+            -Utilizando grid en el css.
+        -->
+        <p>
+            <input type="button" id="borrar" value="C" onclick="borradoTotal()"  />
+        </p>
+
+        <!--
+            Además del atributo onclick, también hay que utilizar los atributos type="button",
+            para definir que es un botón y value, que definirá el valor de ese botón.
+        -->
+
+        <p>
+            <input type="button" value="7" onclick="numero('7')" />
+            <input type="button" value="8" onclick="numero('8')" />
+            <input type="button" value="9" onclick="numero('9')" />
+            <input type="button" value="/" onclick="operar('/')"  />
+        </p>
+
+        <p>
+            <input type="button" value="4" onclick="numero('4')" />
+            <input type="button" value="5" onclick="numero('5')" />
+            <input type="button" value="6" onclick="numero('6')" />
+            <input type="button" value="*" onclick="operar('*')" />
+        </p>
+
+        <p>
+            <input type="button" value="1" onclick="numero('1')" />
+            <input type="button" value="2" onclick="numero('2')" />
+            <input type="button" value="3" onclick="numero('3')" />
+            <input type="button" value="-" onclick="operar('-')" />
+        </p>
+
+        <p>
+            <input type="button" value="0" onclick="numero('0')" />
+            <input type="button" value="+" onclick="operar('+')" />
+            <input type="button" value="%" onclick="operar('%')" />
+            <input type="button" value="=" onclick="igualar()" />
+        </p>
+    </div>
+</body>
+</html>
